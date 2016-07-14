@@ -11,7 +11,8 @@ In search.py, you will implement generic search algorithms which are called
 by Pacman agents (in searchAgents.py).
 """
 
-import util
+from util import *
+#import util
 
 class SearchProblem:
     """
@@ -101,13 +102,86 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
 
+    fringe = Stack()
+    prev_states = set()
+    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
+    fringe.push(initial_candidate)
+        
+    while not fringe.isEmpty():
+        state, actions  = fringe.pop()
+        if problem.isGoalState(state):
+            return actions
+        if state not in prev_states:
+            prev_states.add(state)
+            for suc in filter(lambda x: x[0] not in prev_states, problem.getSuccessors(state)):
+                fringe.push((suc[0], actions + [suc[1]]))
+        
+    return []
+
+
+def printFringe(fringe):
+    print "Fringe: ", fringe.heap[0:]
+
+
 def breadthFirstSearch(problem):
     """
     Search the shallowest nodes in the search tree first.
     """
 
+    fringe = Queue()
+    prev_states = set()
+    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
+    fringe.push(initial_candidate)
+        
+    while not fringe.isEmpty():
+        state, actions = fringe.pop()
+        if problem.isGoalState(state):
+            return actions
+        if state not in prev_states:
+            prev_states.add(state)
+            for suc in filter(lambda x: x[0] not in prev_states, problem.getSuccessors(state)):
+                fringe.push((suc[0], actions + [suc[1]]))
+                
+    return []
+
+
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
+    
+    gameState = problem.getGameState()
+    #problem.setCostFn(lambda s: cost(s, problem))
+    fringe = PriorityQueue()
+    prev_states = set()
+    initial_candidate = (problem.getStartState(), [], 0) #(state[Coord], action[N,E,S,W], priority)
+    fringe.push(initial_candidate, 0)
+        
+    while not fringe.isEmpty():
+        state, actions, priority = fringe.pop()
+        if problem.isGoalState(state):
+            print "Priority: ", priority
+            return actions
+        if state not in prev_states:
+            prev_states.add((state, priority))
+            prev_s, prev_p = zip(*prev_states)
+            for suc in problem.getSuccessors(state):
+                print "cost (from ucs): ", cost(suc[0], problem)
+                new_priority = priority + cost(suc[0], problem)
+                if (suc[0] not in prev_s) or (prev_p[prev_s.index(suc[0])] > new_priority): 
+                    fringe.push((suc[0], actions + [suc[1]], new_priority), new_priority)
+                
+    return []
+
+def cost(state, problem):
+    gameState = problem.getGameState()
+    min_ghost_distance = 5
+    cost = 1
+    if gameState.hasFood(state[0], state[1]):
+        print "Food!"
+        cost = 0
+    ghost_distances = map(lambda p: manhattanDistance(p, state), gameState.getGhostPositions())
+    if filter(lambda d: d <= min_ghost_distance, ghost_distances):
+        cost = 10
+    return cost
 
 def nullHeuristic(state, problem=None):
     """

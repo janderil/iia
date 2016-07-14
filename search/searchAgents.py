@@ -153,6 +153,10 @@ class PositionSearchProblem(search.SearchProblem):
 
         # For display purposes
         self._visited, self._visitedlist, self._expanded = {}, [], 0
+        
+        #agregado
+        self.gameState = gameState
+        
 
     def getStartState(self):
         return self.startState
@@ -190,6 +194,8 @@ class PositionSearchProblem(search.SearchProblem):
             if not self.walls[nextx][nexty]:
                 nextState = (nextx, nexty)
                 cost = self.costFn(nextState)
+                #sacar
+                print "cost (from costFn): ", cost
                 successors.append( ( nextState, action, cost) )
 
         # Bookkeeping for display purposes
@@ -215,6 +221,15 @@ class PositionSearchProblem(search.SearchProblem):
             if self.walls[x][y]: return 999999
             cost += self.costFn((x,y))
         return cost
+    
+    #agregado
+    def getGameState(self):
+        return self.gameState
+    
+    #agregado
+    def setCostFn(self, fun):
+        self.costFn = fun
+    
 
 class StayEastSearchAgent(SearchAgent):
     """
