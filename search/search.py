@@ -149,25 +149,26 @@ def uniformCostSearch(problem):
     "Search the node of least total cost first."
     
     gameState = problem.getGameState()
-    #problem.setCostFn(lambda s: cost(s, problem))
+    problem.setCostFn(lambda s: cost(s, problem))
     fringe = PriorityQueue()
-    prev_states = set()
-    initial_candidate = (problem.getStartState(), [], 0) #(state[Coord], action[N,E,S,W], priority)
+    prev_states_priorities = set()
+    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
     fringe.push(initial_candidate, 0)
         
     while not fringe.isEmpty():
-        state, actions, priority = fringe.pop()
+        state, actions = fringe.pop()
+        priority = problem.getCostOfActions(actions)
         if problem.isGoalState(state):
             print "Priority: ", priority
             return actions
-        if state not in prev_states:
-            prev_states.add((state, priority))
-            prev_s, prev_p = zip(*prev_states)
+        if (state, priority) not in prev_states_priorities:
+            prev_states_priorities.add((state, priority))
+            prev_s, prev_p = zip(*prev_states_priorities)
             for suc in problem.getSuccessors(state):
-                print "cost (from ucs): ", cost(suc[0], problem)
-                new_priority = priority + cost(suc[0], problem)
+                new_actions = actions + [suc[1]]
+                new_priority = problem.getCostOfActions(new_actions)
                 if (suc[0] not in prev_s) or (prev_p[prev_s.index(suc[0])] > new_priority): 
-                    fringe.push((suc[0], actions + [suc[1]], new_priority), new_priority)
+                    fringe.push((suc[0], new_actions), new_priority)
                 
     return []
 
@@ -176,7 +177,6 @@ def cost(state, problem):
     min_ghost_distance = 5
     cost = 1
     if gameState.hasFood(state[0], state[1]):
-        print "Food!"
         cost = 0
     ghost_distances = map(lambda p: manhattanDistance(p, state), gameState.getGhostPositions())
     if filter(lambda d: d <= min_ghost_distance, ghost_distances):

@@ -194,8 +194,6 @@ class PositionSearchProblem(search.SearchProblem):
             if not self.walls[nextx][nexty]:
                 nextState = (nextx, nexty)
                 cost = self.costFn(nextState)
-                #sacar
-                print "cost (from costFn): ", cost
                 successors.append( ( nextState, action, cost) )
 
         # Bookkeeping for display purposes
