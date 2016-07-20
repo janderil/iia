@@ -12,6 +12,7 @@ by Pacman agents (in searchAgents.py).
 """
 
 from util import *
+#from math import inf
 #import util
 
 class SearchProblem:
@@ -192,6 +193,58 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
+    
+    #
+    myInf = 1000000000
+    #
+    
+    closedSet = set() #nodes already evaluated
+    openSet = set() #currently discovered nodes, still to be evaluated
+    initial_state = problem.getStartState()
+    openSet.add(initial_state)
+    
+    cameFrom = dict() #for each node, the most efficient previous step
+
+    gScore = dict() #the cost of getting from the start node to the current node
+    gScore[initial_state] = 0 
+    
+    fScore = PriorityQueue() #the total cost of getting from the start node to the goal by passing by the current node (partly known, partly heuristic)
+    fScore.push(initial_state, heuristic(initial_state, problem)) #for the first node, that value is completely heuristic
+
+    while openSet:
+        current_state = fScore.pop()
+        if problem.isGoalState(current_state):
+            return reconstruct_actions(cameFrom, current_state)
+        openSet.remove(current_state)
+        closedSet.add(current_state)
+        for suc in problem.getSuccessors(current_state):
+            suc_state = suc[0]
+            suc_action = suc[1]
+            suc_cost = suc[2]
+            if suc_state in closedSet: #ignore the successors which are already evaluated
+                continue
+            tentative_gScore = gScore[current_state] + suc_cost #the distance from start to a node
+            if suc not in openSet: #discover a new node
+                openSet.add(suc_state)
+                gScore[suc_state] = myInf
+                fScore.push(suc_state, myInf)
+            elif tentative_gScore >= gScore[suc_state]:
+                continue #this is not a better path
+
+            #this path is the best until now
+            cameFrom[suc_state] = (current_state, suc_action)
+            gScore[suc_state] = tentative_gScore
+            fScore.push(suc_state, gScore[suc_state] + heuristic(suc_state, problem))
+
+    return []
+
+def reconstruct_actions(cameFrom, current_state):
+    actions = []
+    while current_state in cameFrom:
+        current_state, act = cameFrom[current_state]
+        actions = [act] + actions
+    return actions
+    
 
 # Abbreviations
 bfs = breadthFirstSearch
