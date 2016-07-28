@@ -49,25 +49,25 @@
         <NamedIndividual IRI="#Osasuna"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Uniforme"/>
+        <DataProperty IRI="#apodo"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#capacidad"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#apodo"/>
+        <Class IRI="#Uniforme"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#esPresididoPor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#marca"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Mallorca"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Pantalon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#marca"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sevilla"/>
@@ -85,10 +85,10 @@
         <NamedIndividual IRI="#Messi"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Espanyol"/>
+        <NamedIndividual IRI="#Barcelona"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Espanyol"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nombre"/>
@@ -97,13 +97,13 @@
         <ObjectProperty IRI="#entrenaA"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#preside"/>
+        <Class IRI="#Medias"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sampaoli"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Medias"/>
+        <ObjectProperty IRI="#preside"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Zidane"/>
@@ -148,10 +148,10 @@
         <Class IRI="#Entrenamiento"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#estaFormado"/>
+        <Class IRI="#Estadio"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Estadio"/>
+        <ObjectProperty IRI="#estaFormado"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Enrique"/>
@@ -340,7 +340,7 @@
         <NamedIndividual IRI="#Coke"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#SegundaDivision"/>
+        <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#DeportivoAlaves"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -494,6 +494,16 @@
         <ObjectProperty IRI="#entrenaA"/>
         <NamedIndividual IRI="#Sampaoli"/>
         <NamedIndividual IRI="#Sevilla"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disputaPartidosLocalEn"/>
+        <NamedIndividual IRI="#Sevilla"/>
+        <NamedIndividual IRI="#SanchezPizjuan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#esEntrenadoPor"/>
+        <NamedIndividual IRI="#Sevilla"/>
+        <NamedIndividual IRI="#Sampaoli"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#entrenaA"/>
