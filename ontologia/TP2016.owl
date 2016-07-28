@@ -70,6 +70,9 @@
         <DataProperty IRI="#marca"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Directivo1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Sevilla"/>
     </Declaration>
     <Declaration>
@@ -128,6 +131,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Equipo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShortSevilla"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ronaldo"/>
@@ -199,6 +205,9 @@
         <Class IRI="#Jugador"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#largo"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#posicionUltimaLiga"/>
     </Declaration>
     <Declaration>
@@ -213,36 +222,6 @@
     <Declaration>
         <ObjectProperty IRI="#entrenanEn"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#Directivo"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Persona"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#preside"/>
-                <Class IRI="#Equipo"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Jugador"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Persona"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#forman"/>
-                <Class IRI="#Equipo"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Tecnico"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Persona"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#entrenaA"/>
-                <Class IRI="#Equipo"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Camiseta"/>
         <Class IRI="#Uniforme"/>
@@ -254,6 +233,12 @@
     <SubClassOf>
         <Class IRI="#Directivo"/>
         <Class IRI="#Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Directivo"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#preside"/>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Entrenamiento"/>
@@ -308,12 +293,22 @@
         <Class IRI="#Indumentaria"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#Camiseta"/>
+        <Class IRI="#Pantalon"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#CampoEntrenamiento"/>
         <Class IRI="#Estadio"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Entrenamiento"/>
         <Class IRI="#Uniforme"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Equipo"/>
+        <Class IRI="#Indumentaria"/>
+        <Class IRI="#Instalacion"/>
+        <Class IRI="#Persona"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PrimeraDivision"/>
@@ -342,6 +337,10 @@
     <ClassAssertion>
         <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#DeportivoAlaves"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Directivo1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Tecnico"/>
@@ -420,6 +419,10 @@
         <NamedIndividual IRI="#Sevilla"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Pantalon"/>
+        <NamedIndividual IRI="#ShortSevilla"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Jugador"/>
         <NamedIndividual IRI="#Simeone"/>
     </ClassAssertion>
@@ -454,6 +457,16 @@
         <ObjectProperty IRI="#esEntrenadoPor"/>
         <NamedIndividual IRI="#Barcelona"/>
         <NamedIndividual IRI="#Enrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#preside"/>
+        <NamedIndividual IRI="#Directivo1"/>
+        <NamedIndividual IRI="#Espanyol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#preside"/>
+        <NamedIndividual IRI="#Directivo1"/>
+        <NamedIndividual IRI="#RealSociedad"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#entrenaA"/>
@@ -548,7 +561,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#apertura"/>
         <NamedIndividual IRI="#Calderon"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">19</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1966</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#capacidad"/>
@@ -643,7 +656,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#colores"/>
         <NamedIndividual IRI="#OficialBarcelona"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bordó</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bordo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#marca"/>
@@ -709,6 +722,16 @@
         <DataProperty IRI="#posicionUltimaLiga"/>
         <NamedIndividual IRI="#Sevilla"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#ShortSevilla"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gris</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#largo"/>
+        <NamedIndividual IRI="#ShortSevilla"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">corto</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#apodo"/>
@@ -852,11 +875,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#apodo"/>
-        <Class IRI="#Equipo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#apodo"/>
-        <Class IRI="#Jugador"/>
+        <ObjectUnionOf>
+            <Class IRI="#Equipo"/>
+            <Class IRI="#Jugador"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#añoDebut"/>
@@ -868,15 +890,11 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#colores"/>
-        <Class IRI="#Camiseta"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#colores"/>
-        <Class IRI="#Medias"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#colores"/>
-        <Class IRI="#Pantalon"/>
+        <ObjectUnionOf>
+            <Class IRI="#Camiseta"/>
+            <Class IRI="#Medias"/>
+            <Class IRI="#Pantalon"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#estatura"/>
@@ -885,6 +903,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#goles"/>
         <Class IRI="#Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#largo"/>
+        <Class IRI="#Pantalon"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#marca"/>
@@ -896,11 +918,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#nombreCompleto"/>
-        <Class IRI="#Estadio"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#nombreCompleto"/>
-        <Class IRI="#Persona"/>
+        <ObjectUnionOf>
+            <Class IRI="#Estadio"/>
+            <Class IRI="#Persona"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#partidosInternacionales"/>
@@ -928,11 +949,24 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#capacidad"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#colores"/>
-        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+        <DataOneOf>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">amarillo</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">azul</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">blanco</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bordo</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gris</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">negro</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rojo</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#estatura"/>
@@ -940,7 +974,19 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#goles"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#largo"/>
+        <DataOneOf>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">corto</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">largo</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#marca"/>
@@ -956,15 +1002,30 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#partidosInternacionales"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#posicionUltimaLiga"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#titulosGanados"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
 </Ontology>
 
