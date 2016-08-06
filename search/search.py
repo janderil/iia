@@ -11,9 +11,7 @@ In search.py, you will implement generic search algorithms which are called
 by Pacman agents (in searchAgents.py).
 """
 
-from util import *
-#from math import inf
-#import util
+import util
 
 class SearchProblem:
     """
@@ -89,100 +87,36 @@ def search(problem, fringe):
                 fringe.push(candidate)
 
 def depthFirstSearch(problem):
-    """
-    Search the deepest nodes in the search tree first
+	"""
+	Search the deepest nodes in the search tree first
 
-    Your search algorithm needs to return a list of actions that reaches
-    the goal.  Make sure to implement a graph search algorithm
+	Your search algorithm needs to return a list of actions that reaches
+	the goal.  Make sure to implement a graph search algorithm
 
-    To get started, you might want to try some of these simple commands to
-    understand the search problem that is being passed in:
+	To get started, you might want to try some of these simple commands to
+	understand the search problem that is being passed in:
 
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
-    """
-
-    fringe = Stack()
-    prev_states = set()
-    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
-    fringe.push(initial_candidate)
-        
-    while not fringe.isEmpty():
-        state, actions  = fringe.pop()
-        if problem.isGoalState(state):
-            return actions
-        if state not in prev_states:
-            prev_states.add(state)
-            for suc in filter(lambda x: x[0] not in prev_states, problem.getSuccessors(state)):
-                fringe.push((suc[0], actions + [suc[1]]))
-        
-    return []
-
-
-def printFringe(fringe):
-    print "Fringe: ", fringe.heap[0:]
-
+	print "Start:", problem.getStartState()
+	print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+	print "Start's successors:", problem.getSuccessors(problem.getStartState())
+	"""
+	from util import Stack
+	fringe = Stack()
+	return search(problem, fringe)
 
 def breadthFirstSearch(problem):
-    """
-    Search the shallowest nodes in the search tree first.
-    """
-
-    fringe = Queue()
-    prev_states = set()
-    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
-    fringe.push(initial_candidate)
-        
-    while not fringe.isEmpty():
-        state, actions = fringe.pop()
-        if problem.isGoalState(state):
-            return actions
-        if state not in prev_states:
-            prev_states.add(state)
-            for suc in filter(lambda x: x[0] not in prev_states, problem.getSuccessors(state)):
-                fringe.push((suc[0], actions + [suc[1]]))
-                
-    return []
-
+	"""
+	Search the shallowest nodes in the search tree first.
+	"""
+	from util import Queue
+	fringe = Queue()
+	return search(problem, fringe)
 
 def uniformCostSearch(problem):
-    "Search the node of least total cost first."
-    
-    gameState = problem.getGameState()
-    problem.setCostFn(lambda s: cost(s, problem))
-    fringe = PriorityQueue()
-    prev_states_priorities = set()
-    initial_candidate = (problem.getStartState(), []) #(state[Coord], action[N,E,S,W])
-    fringe.push(initial_candidate, 0)
-        
-    while not fringe.isEmpty():
-        state, actions = fringe.pop()
-        priority = problem.getCostOfActions(actions)
-        if problem.isGoalState(state):
-            print "Priority: ", priority
-            return actions
-        if (state, priority) not in prev_states_priorities:
-            prev_states_priorities.add((state, priority))
-            prev_s, prev_p = zip(*prev_states_priorities)
-            for suc in problem.getSuccessors(state):
-                new_actions = actions + [suc[1]]
-                new_priority = problem.getCostOfActions(new_actions)
-                if (suc[0] not in prev_s) or (prev_p[prev_s.index(suc[0])] > new_priority): 
-                    fringe.push((suc[0], new_actions), new_priority)
-                
-    return []
-
-def cost(state, problem):
-    gameState = problem.getGameState()
-    min_ghost_distance = 5
-    cost = 1
-    if gameState.hasFood(state[0], state[1]):
-        cost = 0
-    ghost_distances = map(lambda p: manhattanDistance(p, state), gameState.getGhostPositions())
-    if filter(lambda d: d <= min_ghost_distance, ghost_distances):
-        cost = 10
-    return cost
+	"Search the node of least total cost first."
+	from util import PriorityQueueWithFunction
+	fringe = PriorityQueueWithFunction(lambda (st,acc) : problem.getCostOfActions(acc))
+	return search(problem, fringe)
 
 def nullHeuristic(state, problem=None):
     """
@@ -192,59 +126,10 @@ def nullHeuristic(state, problem=None):
     return 0
 
 def aStarSearch(problem, heuristic=nullHeuristic):
-    "Search the node that has the lowest combined cost and heuristic first."
-    
-    #
-    myInf = 1000000000
-    #
-    
-    closedSet = set() #nodes already evaluated
-    openSet = set() #currently discovered nodes, still to be evaluated
-    initial_state = problem.getStartState()
-    openSet.add(initial_state)
-    
-    cameFrom = dict() #for each node, the most efficient previous step
-
-    gScore = dict() #the cost of getting from the start node to the current node
-    gScore[initial_state] = 0 
-    
-    fScore = PriorityQueue() #the total cost of getting from the start node to the goal by passing by the current node (partly known, partly heuristic)
-    fScore.push(initial_state, heuristic(initial_state, problem)) #for the first node, that value is completely heuristic
-
-    while openSet:
-        current_state = fScore.pop()
-        if problem.isGoalState(current_state):
-            return reconstruct_actions(cameFrom, current_state)
-        openSet.remove(current_state)
-        closedSet.add(current_state)
-        for suc in problem.getSuccessors(current_state):
-            suc_state = suc[0]
-            suc_action = suc[1]
-            suc_cost = suc[2]
-            if suc_state in closedSet: #ignore the successors which are already evaluated
-                continue
-            tentative_gScore = gScore[current_state] + suc_cost #the distance from start to a node
-            if suc not in openSet: #discover a new node
-                openSet.add(suc_state)
-                gScore[suc_state] = myInf
-                fScore.push(suc_state, myInf)
-            elif tentative_gScore >= gScore[suc_state]:
-                continue #this is not a better path
-
-            #this path is the best until now
-            cameFrom[suc_state] = (current_state, suc_action)
-            gScore[suc_state] = tentative_gScore
-            fScore.push(suc_state, gScore[suc_state] + heuristic(suc_state, problem))
-
-    return []
-
-def reconstruct_actions(cameFrom, current_state):
-    actions = []
-    while current_state in cameFrom:
-        current_state, act = cameFrom[current_state]
-        actions = [act] + actions
-    return actions
-    
+	"Search the node that has the lowest combined cost and heuristic first."	
+	from util import PriorityQueueWithFunction
+	fringe = PriorityQueueWithFunction(lambda (st,acc) : problem.getCostOfActions(acc) + heuristic(st, problem))
+	return search(problem, fringe)
 
 # Abbreviations
 bfs = breadthFirstSearch

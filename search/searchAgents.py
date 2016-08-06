@@ -153,10 +153,6 @@ class PositionSearchProblem(search.SearchProblem):
 
         # For display purposes
         self._visited, self._visitedlist, self._expanded = {}, [], 0
-        
-        #agregado
-        self.gameState = gameState
-        
 
     def getStartState(self):
         return self.startState
@@ -219,15 +215,6 @@ class PositionSearchProblem(search.SearchProblem):
             if self.walls[x][y]: return 999999
             cost += self.costFn((x,y))
         return cost
-    
-    #agregado
-    def getGameState(self):
-        return self.gameState
-    
-    #agregado
-    def setCostFn(self, fun):
-        self.costFn = fun
-    
 
 class StayEastSearchAgent(SearchAgent):
     """
@@ -270,95 +257,142 @@ def euclideanHeuristic(position, problem, info={}):
 #####################################################
 
 class CornersProblem(search.SearchProblem):
-    """
-    This search problem finds paths through all four corners of a layout.
+	"""
+	This search problem finds paths through all four corners of a layout.
 
-    You must select a suitable state space and successor function
-    """
+	You must select a suitable state space and successor function
+	"""
+	
+	def __init__(self, startingGameState):
+		"""
+		Stores the walls, pacman's starting position and corners.
+		"""
+		self.walls = startingGameState.getWalls()
+		self.startingPosition = startingGameState.getPacmanPosition()
+		top, right = self.walls.height-2, self.walls.width-2
+		self.corners = ((1,1), (1,top), (right, 1), (right, top))
+		for corner in self.corners:
+			if not startingGameState.hasFood(*corner):
+				print 'Warning: no food in corner ' + str(corner)
+		self._expanded = 0 # Number of search nodes expanded
+		
+		cornerState = [False, False, False, False]
+		for i in range(0,4): 
+			if (self.startingPosition == self.corners[i]): 
+				cornerState[i] = True
+		
+		self.startState = (self.startingPosition, (cornerState[0],cornerState[1],cornerState[2],cornerState[3]))
+		self.goal = (True, True, True, True)
 
-    def __init__(self, startingGameState):
-        """
-        Stores the walls, pacman's starting position and corners.
-        """
-        self.walls = startingGameState.getWalls()
-        self.startingPosition = startingGameState.getPacmanPosition()
-        top, right = self.walls.height-2, self.walls.width-2
-        self.corners = ((1,1), (1,top), (right, 1), (right, top))
-        for corner in self.corners:
-            if not startingGameState.hasFood(*corner):
-                print 'Warning: no food in corner ' + str(corner)
-        self._expanded = 0 # Number of search nodes expanded
 
-        "*** YOUR CODE HERE ***"
+	def getStartState(self):
+		"Returns the start state (in your state space, not the full Pacman state space)"
+		"*** YOUR CODE HERE ***"
+		return self.startState
 
-    def getStartState(self):
-        "Returns the start state (in your state space, not the full Pacman state space)"
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+	def isGoalState(self, state):
+		"Returns whether this search state is a goal state of the problem"
+		"*** YOUR CODE HERE ***"
+		(pos, corners) = state
+		return (corners == self.goal)
 
-    def isGoalState(self, state):
-        "Returns whether this search state is a goal state of the problem"
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+	def getSuccessors(self, state):
+		"""
+		Returns successor states, the actions they require, and a cost of 1.
 
-    def getSuccessors(self, state):
-        """
-        Returns successor states, the actions they require, and a cost of 1.
+		 As noted in search.py:
+			 For a given state, this should return a list of triples,
+		 (successor, action, stepCost), where 'successor' is a
+		 successor to the current state, 'action' is the action
+		 required to get there, and 'stepCost' is the incremental
+		 cost of expanding to that successor
+		"""
+		successors = []
+		for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+			# Add a successor state to the successor list if the action is legal
+			((x,y), cornerst) = state
+			cnst = [cornerst[0], cornerst[1], cornerst[2], cornerst[3]]
+			dx, dy = Actions.directionToVector(action)
+			nextx, nexty = int(x + dx), int(y + dy)
+			if not self.walls[nextx][nexty]:
+				nextPos = (nextx, nexty)
+				for i in range(0,4): 
+					if (nextPos == self.corners[i]): 
+						cnst[i] = True
+				successors.append( ( (nextPos, (cnst[0],cnst[1],cnst[2],cnst[3])), action, 1) )
+		self._expanded += 1
+		return successors
 
-         As noted in search.py:
-             For a given state, this should return a list of triples,
-         (successor, action, stepCost), where 'successor' is a
-         successor to the current state, 'action' is the action
-         required to get there, and 'stepCost' is the incremental
-         cost of expanding to that successor
-        """
-
-        successors = []
-        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
-            # Add a successor state to the successor list if the action is legal
-            # Here's a code snippet for figuring out whether a new position hits a wall:
-            #   x,y = currentPosition
-            #   dx, dy = Actions.directionToVector(action)
-            #   nextx, nexty = int(x + dx), int(y + dy)
-            #   hitsWall = self.walls[nextx][nexty]
-
-            "*** YOUR CODE HERE ***"
-
-        self._expanded += 1
-        return successors
-
-    def getCostOfActions(self, actions):
-        """
-        Returns the cost of a particular sequence of actions.  If those actions
-        include an illegal move, return 999999.  This is implemented for you.
-        """
-        if actions == None: return 999999
-        x,y= self.startingPosition
-        for action in actions:
-            dx, dy = Actions.directionToVector(action)
-            x, y = int(x + dx), int(y + dy)
-            if self.walls[x][y]: return 999999
-        return len(actions)
+	def getCostOfActions(self, actions):
+		"""
+		Returns the cost of a particular sequence of actions.  If those actions
+		include an illegal move, return 999999.  This is implemented for you.
+		"""
+		if actions == None: return 999999
+		x,y= self.startingPosition
+		for action in actions:
+			dx, dy = Actions.directionToVector(action)
+			x, y = int(x + dx), int(y + dy)
+			if self.walls[x][y]: return 999999
+		return len(actions)
 
 
 def cornersHeuristic(state, problem):
-    """
-    A heuristic for the CornersProblem that you defined.
+	"""
+	A heuristic for the CornersProblem that you defined.
 
-      state:   The current search state
-               (a data structure you chose in your search problem)
+	  state:   The current search state
+			   (a data structure you chose in your search problem)
 
-      problem: The CornersProblem instance for this layout.
+	  problem: The CornersProblem instance for this layout.
 
-    This function should always return a number that is a lower bound
-    on the shortest path from the state to a goal of the problem; i.e.
-    it should be admissible (as well as consistent).
-    """
-    corners = problem.corners # These are the corner coordinates
-    walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
+	This function should always return a number that is a lower bound
+	on the shortest path from the state to a goal of the problem; i.e.
+	it should be admissible (as well as consistent).
+	"""
+	corners = problem.corners # These are the corner coordinates
+	walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
+	"*** YOUR CODE HERE ***"	
+	nv = []
+	(pos, cornerst) = state
+	for i in range(0,4):
+		if cornerst[i] == False:
+			nv.append(corners[i]) 
+	
+	lencrs = len(nv)
+	from util import manhattanDistance
+	md = manhattanDistance
+	if lencrs == 0:   # lencrs = 0 y 1 triviales
+		return 0
+	elif lencrs == 1: 
+		return md(nv[0],pos)
+	elif lencrs == 2:  
+		return (min(md(nv[0],pos), md(nv[1],pos)) + md(nv[0], nv[1]))
+	elif lencrs == 3:  # esto no es tan greedy
+		suma0 = md(pos, nv[0]) + minpath(nv[0], [nv[1],nv[2]])
+		suma1 = md(pos, nv[1]) + minpath(nv[1], [nv[0],nv[2]])
+		suma2 = md(pos, nv[2]) + minpath(nv[2], [nv[0],nv[1]])
+		return  ( min(suma0, min(suma1, suma2)) )
+		#~ return minpath(pos, nv)
+	else: #lencrs == 4, esto es greedy
+		return minpath(pos, nv)
+		
+def nearestpt(pos, listpos): 
+	from util import manhattanDistance
+	mind = 99999999
+	for p in listpos: 
+		if (manhattanDistance(p,pos) < mind): 
+			minp = p
+			mind = manhattanDistance(p,pos)
+	return minp
 
-    "*** YOUR CODE HERE ***"
-    return 0 # Default to trivial solution
+def minpath(pos, listpos):
+	from util import manhattanDistance
+	if listpos == []: 
+		return 0
+	minp = nearestpt(pos, listpos)
+	listpos.remove(minp)
+	return manhattanDistance(pos, minp) + minpath(minp, listpos)
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
@@ -391,7 +425,7 @@ class FoodSearchProblem:
     def getSuccessors(self, state):
         "Returns successor states, the actions they require, and a cost of 1."
         successors = []
-        self._expanded += 1
+        
         for direction in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
             x,y = state[0]
             dx, dy = Actions.directionToVector(direction)
@@ -400,6 +434,7 @@ class FoodSearchProblem:
                 nextFood = state[1].copy()
                 nextFood[nextx][nexty] = False
                 successors.append( ( ((nextx, nexty), nextFood), direction, 1) )
+        self._expanded += 1
         return successors
 
     def getCostOfActions(self, actions):
