@@ -31,10 +31,16 @@
         <ObjectProperty IRI="#esEntrenadoPor"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DeportivoAlaves"/>
+        <NamedIndividual IRI="#Griezmann"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Martino"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Indumentaria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeportivoAlaves"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#colores"/>
@@ -46,19 +52,31 @@
         <Class IRI="#CampoEntrenamiento"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PracticaBarcelona"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Osasuna"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#apodo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#capacidad"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Uniforme"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#capacidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apodo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OficialGirona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MediasBarcelona"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#esPresididoPor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#marca"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Mallorca"/>
@@ -67,19 +85,16 @@
         <Class IRI="#Pantalon"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#marca"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Directivo1"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Sevilla"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RealMadrid"/>
+        <NamedIndividual IRI="#FPerez"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Directivo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RealMadrid"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RealZaragoza"/>
@@ -88,10 +103,10 @@
         <NamedIndividual IRI="#Messi"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Espanyol"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Espanyol"/>
+        <NamedIndividual IRI="#Barcelona"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nombre"/>
@@ -100,28 +115,37 @@
         <ObjectProperty IRI="#entrenaA"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Medias"/>
+        <NamedIndividual IRI="#Roig"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Sampaoli"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#preside"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Sampaoli"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medias"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Zidane"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#disputaPartidosLocalEn"/>
+        <NamedIndividual IRI="#OficialSevilla"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OficialSevilla"/>
+        <ObjectProperty IRI="#disputaPartidosLocalEn"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Instalacion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OficialBarcelona"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Posicion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Pique"/>
@@ -133,10 +157,10 @@
         <Class IRI="#Equipo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ShortSevilla"/>
+        <NamedIndividual IRI="#Ronaldo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#ShortSevilla"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#goles"/>
@@ -154,13 +178,22 @@
         <Class IRI="#Entrenamiento"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Estadio"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#estaFormado"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Estadio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sabalza"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Enrique"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CiudadDeportivaRealZaragoza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Delantero"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Coke"/>
@@ -178,10 +211,19 @@
         <NamedIndividual IRI="#Getafe"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PracticaRealMadrid"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#apertura"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#OficialRealMadrid"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Valencia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Defensor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Girona"/>
@@ -193,10 +235,22 @@
         <Class IRI="#Persona"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#juegaDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AlternativaRealMadrid"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#forman"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Galmes"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SanchezPizjuan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Arquero"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#viste"/>
@@ -217,7 +271,19 @@
         <DataProperty IRI="#nombreCompleto"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Machin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mediocampista"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#titulosGanados"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CiudadRealMadrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bartomeu"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#entrenanEn"/>
@@ -315,12 +381,24 @@
         <Class IRI="#SegundaDivision"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Camiseta"/>
+        <NamedIndividual IRI="#AlternativaRealMadrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Posicion"/>
+        <NamedIndividual IRI="#Arquero"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#AtleticoMadrid"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Bartomeu"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Estadio"/>
@@ -331,16 +409,28 @@
         <NamedIndividual IRI="#CampNou"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CampoEntrenamiento"/>
+        <NamedIndividual IRI="#CiudadDeportivaRealZaragoza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CampoEntrenamiento"/>
+        <NamedIndividual IRI="#CiudadRealMadrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Jugador"/>
         <NamedIndividual IRI="#Coke"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#PrimeraDivision"/>
-        <NamedIndividual IRI="#DeportivoAlaves"/>
+        <Class IRI="#Posicion"/>
+        <NamedIndividual IRI="#Defensor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Directivo"/>
-        <NamedIndividual IRI="#Directivo1"/>
+        <Class IRI="#Posicion"/>
+        <NamedIndividual IRI="#Delantero"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrimeraDivision"/>
+        <NamedIndividual IRI="#DeportivoAlaves"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Tecnico"/>
@@ -351,8 +441,16 @@
         <NamedIndividual IRI="#Espanyol"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#FPerez"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Jugador"/>
         <NamedIndividual IRI="#Fuster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Galmes"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SegundaDivision"/>
@@ -363,8 +461,28 @@
         <NamedIndividual IRI="#Girona"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Jugador"/>
+        <NamedIndividual IRI="#Griezmann"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tecnico"/>
+        <NamedIndividual IRI="#Machin"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#SegundaDivision"/>
         <NamedIndividual IRI="#Mallorca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Martino"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medias"/>
+        <NamedIndividual IRI="#MediasBarcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Posicion"/>
+        <NamedIndividual IRI="#Mediocampista"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Jugador"/>
@@ -373,6 +491,14 @@
     <ClassAssertion>
         <Class IRI="#Camiseta"/>
         <NamedIndividual IRI="#OficialBarcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camiseta"/>
+        <NamedIndividual IRI="#OficialGirona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camiseta"/>
+        <NamedIndividual IRI="#OficialRealMadrid"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Camiseta"/>
@@ -391,6 +517,14 @@
         <NamedIndividual IRI="#Pique"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Entrenamiento"/>
+        <NamedIndividual IRI="#PracticaBarcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Entrenamiento"/>
+        <NamedIndividual IRI="#PracticaRealMadrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#RealMadrid"/>
     </ClassAssertion>
@@ -403,8 +537,16 @@
         <NamedIndividual IRI="#RealZaragoza"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Roig"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Jugador"/>
         <NamedIndividual IRI="#Ronaldo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Directivo"/>
+        <NamedIndividual IRI="#Sabalza"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Tecnico"/>
@@ -417,6 +559,10 @@
     <ClassAssertion>
         <Class IRI="#PrimeraDivision"/>
         <NamedIndividual IRI="#Sevilla"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pantalon"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Pantalon"/>
@@ -449,6 +595,11 @@
         <NamedIndividual IRI="#Simeone"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#AtleticoMadrid"/>
+        <NamedIndividual IRI="#Griezmann"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#disputaPartidosLocalEn"/>
         <NamedIndividual IRI="#Barcelona"/>
         <NamedIndividual IRI="#CampNou"/>
@@ -459,14 +610,44 @@
         <NamedIndividual IRI="#Enrique"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#preside"/>
-        <NamedIndividual IRI="#Directivo1"/>
-        <NamedIndividual IRI="#Espanyol"/>
+        <ObjectProperty IRI="#esPresididoPor"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Bartomeu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Messi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#Barcelona"/>
+        <NamedIndividual IRI="#Pique"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#preside"/>
-        <NamedIndividual IRI="#Directivo1"/>
-        <NamedIndividual IRI="#RealSociedad"/>
+        <NamedIndividual IRI="#Bartomeu"/>
+        <NamedIndividual IRI="#Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forman"/>
+        <NamedIndividual IRI="#Coke"/>
+        <NamedIndividual IRI="#Sevilla"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Coke"/>
+        <NamedIndividual IRI="#Defensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Coke"/>
+        <NamedIndividual IRI="#OficialSevilla"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Coke"/>
+        <NamedIndividual IRI="#ShortSevilla"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#entrenaA"/>
@@ -474,9 +655,24 @@
         <NamedIndividual IRI="#Barcelona"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#preside"/>
+        <NamedIndividual IRI="#FPerez"/>
+        <NamedIndividual IRI="#RealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forman"/>
         <NamedIndividual IRI="#Fuster"/>
         <NamedIndividual IRI="#Getafe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Fuster"/>
+        <NamedIndividual IRI="#Mediocampista"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#preside"/>
+        <NamedIndividual IRI="#Galmes"/>
+        <NamedIndividual IRI="#Mallorca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#disputaPartidosLocalEn"/>
@@ -484,9 +680,74 @@
         <NamedIndividual IRI="#Perez"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#Getafe"/>
+        <NamedIndividual IRI="#Fuster"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#esEntrenadoPor"/>
+        <NamedIndividual IRI="#Girona"/>
+        <NamedIndividual IRI="#Machin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forman"/>
+        <NamedIndividual IRI="#Griezmann"/>
+        <NamedIndividual IRI="#AtleticoMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Griezmann"/>
+        <NamedIndividual IRI="#Delantero"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#entrenaA"/>
+        <NamedIndividual IRI="#Machin"/>
+        <NamedIndividual IRI="#Girona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#esPresididoPor"/>
+        <NamedIndividual IRI="#Mallorca"/>
+        <NamedIndividual IRI="#Galmes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#debutoEn"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#debutoEn"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#CampNou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forman"/>
         <NamedIndividual IRI="#Messi"/>
         <NamedIndividual IRI="#Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#Delantero"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#MediasBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#OficialBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Messi"/>
+        <NamedIndividual IRI="#PracticaBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#esPresididoPor"/>
+        <NamedIndividual IRI="#Osasuna"/>
+        <NamedIndividual IRI="#Sabalza"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forman"/>
@@ -494,14 +755,84 @@
         <NamedIndividual IRI="#Barcelona"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Pique"/>
+        <NamedIndividual IRI="#Defensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Pique"/>
+        <NamedIndividual IRI="#MediasBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Pique"/>
+        <NamedIndividual IRI="#OficialBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Pique"/>
+        <NamedIndividual IRI="#PracticaBarcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#entrenanEn"/>
+        <NamedIndividual IRI="#RealMadrid"/>
+        <NamedIndividual IRI="#CiudadRealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#esEntrenadoPor"/>
         <NamedIndividual IRI="#RealMadrid"/>
         <NamedIndividual IRI="#Zidane"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#esPresididoPor"/>
+        <NamedIndividual IRI="#RealMadrid"/>
+        <NamedIndividual IRI="#FPerez"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#RealMadrid"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#entrenanEn"/>
+        <NamedIndividual IRI="#RealZaragoza"/>
+        <NamedIndividual IRI="#CiudadDeportivaRealZaragoza"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#forman"/>
         <NamedIndividual IRI="#Ronaldo"/>
         <NamedIndividual IRI="#RealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#juegaDe"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#Delantero"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#AlternativaRealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#OficialRealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#PracticaRealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#viste"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#preside"/>
+        <NamedIndividual IRI="#Sabalza"/>
+        <NamedIndividual IRI="#Osasuna"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#entrenaA"/>
@@ -519,6 +850,11 @@
         <NamedIndividual IRI="#Sampaoli"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaFormado"/>
+        <NamedIndividual IRI="#Sevilla"/>
+        <NamedIndividual IRI="#Coke"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#entrenaA"/>
         <NamedIndividual IRI="#Simeone"/>
         <NamedIndividual IRI="#AtleticoMadrid"/>
@@ -528,6 +864,16 @@
         <NamedIndividual IRI="#Zidane"/>
         <NamedIndividual IRI="#RealMadrid"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#AlternativaRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">negro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#AlternativaRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adidas</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#apodo"/>
         <NamedIndividual IRI="#AtleticoMadrid"/>
@@ -559,6 +905,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">119</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Bartomeu"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Josep Maria Bartomeu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#apertura"/>
         <NamedIndividual IRI="#Calderon"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1966</Literal>
@@ -572,6 +923,11 @@
         <DataProperty IRI="#nombreCompleto"/>
         <NamedIndividual IRI="#Calderon"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vicente Calderón</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apertura"/>
+        <NamedIndividual IRI="#CampNou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1957</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#capacidad"/>
@@ -619,6 +975,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#FPerez"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Florentino Pérez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#añoDebut"/>
         <NamedIndividual IRI="#Fuster"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
@@ -629,9 +990,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">178</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Fuster"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">David</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#nombreCompleto"/>
         <NamedIndividual IRI="#Fuster"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">David Fuster Torrijos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Galmes"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monti Galmés</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#posicionUltimaLiga"/>
@@ -644,9 +1015,74 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#apodo"/>
+        <NamedIndividual IRI="#Griezmann"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">El Principito</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Griezmann"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Antoine</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Griezmann"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Antoine Griezmann</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Machin"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pablo Machín</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#posicionUltimaLiga"/>
         <NamedIndividual IRI="#Mallorca"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Martino"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gerardo Martino</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#MediasBarcelona"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">azul</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apodo"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La Pulga</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#añoDebut"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estatura"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">170</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#goles"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">511</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lionel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lionel Andrés Messi Cuccittini</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#partidosInternacionales"/>
+        <NamedIndividual IRI="#Messi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">113</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#colores"/>
@@ -662,6 +1098,31 @@
         <DataProperty IRI="#marca"/>
         <NamedIndividual IRI="#OficialBarcelona"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nike</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#OficialGirona"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#OficialGirona"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rojo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#OficialGirona"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Kappa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#OficialRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#OficialRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adidas</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#colores"/>
@@ -689,6 +1150,41 @@
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Coliseum Alfonso Perez</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#añoDebut"/>
+        <NamedIndividual IRI="#Pique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estatura"/>
+        <NamedIndividual IRI="#Pique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">193</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Pique"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gerard</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Pique"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gerard Piqué Bernabéu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#partidosInternacionales"/>
+        <NamedIndividual IRI="#Pique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#PracticaBarcelona"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nike</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#PracticaRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adidas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#posicionUltimaLiga"/>
         <NamedIndividual IRI="#RealMadrid"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
@@ -705,8 +1201,33 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Roig"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fernando Roig</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estatura"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">185</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Ronaldo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cristiano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Sabalza"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Luis Sabalza</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
         <NamedIndividual IRI="#Sampaoli"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Jorge Sampaoli</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apertura"/>
+        <NamedIndividual IRI="#SanchezPizjuan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1958</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#capacidad"/>
@@ -722,6 +1243,21 @@
         <DataProperty IRI="#posicionUltimaLiga"/>
         <NamedIndividual IRI="#Sevilla"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#colores"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#largo"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">corto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#marca"/>
+        <NamedIndividual IRI="#ShortRealMadrid"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adidas</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#colores"/>
@@ -773,6 +1309,11 @@
         <NamedIndividual IRI="#Valencia"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreCompleto"/>
+        <NamedIndividual IRI="#Zidane"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Zinedine Zidane</Literal>
+    </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#entrenaA"/>
         <ObjectProperty IRI="#esEntrenadoPor"/>
@@ -818,6 +1359,10 @@
         <Class IRI="#Jugador"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#juegaDe"/>
+        <Class IRI="#Jugador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#preside"/>
         <Class IRI="#Directivo"/>
     </ObjectPropertyDomain>
@@ -827,11 +1372,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#debutoEn"/>
-        <Class IRI="#Equipo"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#debutoEn"/>
-        <Class IRI="#Estadio"/>
+        <ObjectUnionOf>
+            <Class IRI="#Equipo"/>
+            <Class IRI="#Estadio"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#disputaPartidosLocalEn"/>
@@ -860,6 +1404,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#forman"/>
         <Class IRI="#Equipo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#juegaDe"/>
+        <Class IRI="#Posicion"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#preside"/>
