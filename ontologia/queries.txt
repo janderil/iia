@@ -1,2 +1,2 @@
 Equipo and titulosGanados some xsd:integer[>2]
-Equipo and estaFormado some (Jugador and viste some ((Camiseta or Medias or Pantalon) and colores some {"negro"}))
+Equipo and estaFormado some (Jugador and viste some ((Camiseta or Medias or Pantalon) and colores value "negro"))

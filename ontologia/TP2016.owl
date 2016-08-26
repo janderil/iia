@@ -61,10 +61,10 @@
         <Class IRI="#Uniforme"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#capacidad"/>
+        <DataProperty IRI="#apodo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#apodo"/>
+        <DataProperty IRI="#capacidad"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OficialGirona"/>
@@ -909,6 +909,11 @@
         <DataProperty IRI="#nombreCompleto"/>
         <NamedIndividual IRI="#Enrique"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Luis Enrique Martinez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apodo"/>
+        <NamedIndividual IRI="#Espanyol"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Periquitos</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#posicionUltimaLiga"/>
