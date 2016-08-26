@@ -115,10 +115,12 @@ Se establecieron restricciones en las clases a través del rango de sus propieda
 \end{itemize}
 
 La Ontología puede responder a las preguntas pedidas a través de las siguientes queries:
-\begin{itemize}[itemsep=2pt, topsep=0pt]
- \item Equipo and titulosGanados some xsd:integer[$>$2]
+\begin{enumerate}[itemsep=2pt, topsep=0pt]
  \item Equipo and estaFormado some (Jugador and viste some ((Camiseta or Medias or Pantalon) and colores value \textquotedblleft negro\textquotedblright))
-\end{itemize}
+  \\Resultado: RealMadrid
+ \item Equipo and titulosGanados some xsd:integer[$>$2]
+  \\Resultado: AtleticoMadrid, Barcelona
+\end{enumerate}
 
 
 \end{document}
