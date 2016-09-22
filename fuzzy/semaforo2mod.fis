@@ -1,0 +1,54 @@
+[System]
+Name='Semaforo2'
+Ninputs=2
+Noutputs=1
+Nrules=7
+Nexceptions=0
+Conjunction='min'
+MissingValues='random'
+
+[Input1]
+Active='yes'
+Name='delta F'
+Range=[     -10.000 ,      10.000 ]
+NMFs=5
+MF1='negativo','SemiTrapezoidalInf',[     -10.000 ,     -10.000 ,      -5.000 ]
+MF2='negativo chico','triangular',[     -10.000 ,      -5.000 ,       0.000 ]
+MF3='cercano a cero','triangular',[      -5.000 ,       0.000 ,       5.000 ]
+MF4='positivo chico','triangular',[       0.000 ,       5.000 ,      10.000 ]
+MF5='positivo','SemiTrapezoidalSup',[       5.000 ,      10.000 ,      10.000 ]
+
+[Input2]
+Active='yes'
+Name='Zona'
+Range=[       0.000 ,      20.000 ]
+NMFs=2
+MF1='no muy transitada','SemiTrapezoidalInf',[       0.000 ,       5.000 ,      15.000 ]
+MF2='muy transitada','SemiTrapezoidalSup',[       5.000 ,      15.000 ,      20.000 ]
+
+[Output1]
+Nature='fuzzy'
+Defuzzification='area'
+Disjunction='sum'
+DefaultValue=      -1.000 
+Classif='no' 
+Active='yes'
+Name='delta F'
+Range=[     -10.000 ,      10.000 ]
+NMFs=5
+MF1='negativo','SemiTrapezoidalInf',[     -15.774 ,     -10.000 ,      -5.000 ]
+MF2='negativo chico','triangular',[     -10.000 ,      -5.000 ,       0.000 ]
+MF3='cercano a cero','triangular',[      -5.000 ,       0.000 ,       5.000 ]
+MF4='positivo chico','triangular',[       0.000 ,       5.000 ,      10.000 ]
+MF5='positivo','SemiTrapezoidalSup',[       5.000 ,      10.000 ,      10.000 ]
+
+[Rules]
+1, 2,        2.000 ,
+2, 0,        2.000 ,
+3, 0,        3.000 ,
+4, 0,        4.000 ,
+5, 2,        4.000 ,
+1, 1,        1.000 ,
+5, 1,        5.000 ,
+
+[Exceptions]
