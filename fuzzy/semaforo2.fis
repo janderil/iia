@@ -36,11 +36,11 @@ Active='yes'
 Name='delta F'
 Range=[     -10.000 ,      10.000 ]
 NMFs=5
-MF1='negativo','SemiTrapezoidalInf',[     -15.774 ,     -10.000 ,      -5.000 ]
+MF1='negativo','SemiTrapezoidalInf',[     -12.887 ,     -10.000 ,      -5.000 ]
 MF2='negativo chico','triangular',[     -10.000 ,      -5.000 ,       0.000 ]
 MF3='cercano a cero','triangular',[      -5.000 ,       0.000 ,       5.000 ]
 MF4='positivo chico','triangular',[       0.000 ,       5.000 ,      10.000 ]
-MF5='positivo','SemiTrapezoidalSup',[       5.000 ,      10.000 ,      10.000 ]
+MF5='positivo','SemiTrapezoidalSup',[       5.000 ,      10.000 ,      12.887 ]
 
 [Rules]
 1, 2,        2.000 ,
